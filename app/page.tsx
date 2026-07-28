@@ -1,7 +1,23 @@
+import About from "@/components/home/About";
+import ContactMe from "@/components/home/ContactMe";
+import Experiences from "@/components/home/Experiences";
+import FAQ from "@/components/home/FAQ";
+import Feature from "@/components/home/Feature";
+import Hero from "@/components/home/Hero";
+import Projects from "@/components/home/Projects";
+import Skills from "@/components/home/Skills";
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      TEST
+    <div className="relative">
+      <Hero />
+      <About />
+      <Feature />
+      <Projects />
+      <Skills />
+      <Experiences />
+      <FAQ />
+      <ContactMe />
     </div>
   );
 }
