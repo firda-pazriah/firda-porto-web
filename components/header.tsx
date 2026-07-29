@@ -1,16 +1,6 @@
 import { Menu } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-
-const navigation = [
-  { name: "About", href: "#about" },
-  { name: "Feature", href: "#feature" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experiences", href: "#experiences" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact Me", href: "#contact" },
-];
-
+import { navigation } from "../config/navigation";
 export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">

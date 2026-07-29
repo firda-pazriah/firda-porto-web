@@ -1,4 +1,3 @@
-import { ChevronDown } from "lucide-react";
 import Accent from "../accent";
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "../ui/field";
 import { Input } from "../ui/input";
