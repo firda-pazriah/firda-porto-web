@@ -54,12 +54,13 @@ export default function About() {
             About Me
           </h2>
           <p className="mt-8 text-lg font-medium text-pretty text-gray-700 sm:text-xl/8 dark:text-gray-300">
-            I'm planning my comeback to the tech industry after a 1.5-year
+            I&apos;m planning my comeback to the tech industry after a 1.5-year
             career break. After being laid off from my 9-year engineering
             career, I chose to take that time to focus on being a mom. That
             season gave me space to rediscover my love for building things — and
-            the months since, I've spent relearning and sharpening my skills.
-            Now I'm ready to bring that energy to a remote frontend role.
+            the months since, I&apos;ve spent relearning and sharpening my
+            skills. Now I&apos;m ready to bring that energy to a remote frontend
+            role.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">

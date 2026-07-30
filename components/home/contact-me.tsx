@@ -15,7 +15,7 @@ export default function ContactMe() {
             </h2>
             <p className="mt-6 text-lg/8 text-pretty text-muted-foreground">
               Have a project proposal, job opportunity, or technical question?
-              Send me a message and I'll get back to you shortly.
+              Send me a message and I&apos;ll get back to you shortly.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a

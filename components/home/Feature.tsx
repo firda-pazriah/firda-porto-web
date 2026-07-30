@@ -40,8 +40,8 @@ export default function Feature() {
               <p className="mt-6 text-lg/8 text-muted-foreground">
                 A seller productivity suite that fills the gaps free e-commerce
                 ERP tools leave behind — order capture, review analysis, and
-                task tracking, built from problems I've faced running my own
-                shop.
+                task tracking, built from problems I&apos;ve faced running my
+                own shop.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-muted-foreground lg:max-w-none">
                 {features.map((feature) => (
