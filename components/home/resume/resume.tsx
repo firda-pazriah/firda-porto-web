@@ -1,14 +1,14 @@
 import { CloudDownload } from "lucide-react";
-import Accent from "../accent";
+import Accent from "../../accent";
 import Image from "next/image";
 
 import earthImage from "@/public/images/earth.webp";
-import { DialogDownloadResume } from "../dialog-download-resume";
+import { DialogDownloadResume } from "./dialog-download-resume";
 
 export default function Resume() {
   return (
     <section
-      id="about"
+      id="cv"
       className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8 bg-background"
     >
       <Image
@@ -31,11 +31,13 @@ export default function Resume() {
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-base/7 font-semibold text-indigo-400">My Resume</h2>
         <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-foreground sm:text-6xl">
-          Download My Latest CV
+          Get My Resume
         </p>
       </div>
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
-        A record of my professional journey in software engineering role
+        If my story resonates, here&apos;s the paper trail — my full resume with
+        the experience, skills, and everything that&apos;s brought me back to
+        tech.
       </p>
       <div className="glass outline-1 outline-offset-5 rounded-md flex flex-col gap-6 justify-center items-center py-18 mt-16 outline-indigo-400 max-w-2xl mx-auto">
         <CloudDownload size={64} />

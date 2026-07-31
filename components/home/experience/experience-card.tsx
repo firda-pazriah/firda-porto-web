@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Experience } from "@/types/experience";
-import { Separator } from "./ui/separator";
-import BulletList from "./ui/bullet-list";
+import { Separator } from "../../ui/separator";
+import BulletList from "../../ui/bullet-list";
 
 export default function ExperienceCard({
   ref,

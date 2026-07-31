@@ -4,15 +4,11 @@ import { waitUntil } from "@vercel/functions";
 import { Resend } from "resend";
 import { contactSchema } from "@/types/schema/contactSchema";
 import { prisma } from "@/lib/db";
+import { FormActionState } from "@/types/form";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const GENERIC_ERROR = "Something went wrong. Please try again.";
 const production = process.env.VERCEL;
-
-export type ContactActionState = {
-  error: string | null;
-  success: boolean;
-};
 
 async function verifyTurnstileToken(token: string | null): Promise<boolean> {
   if (!token) return false;
@@ -49,9 +45,9 @@ async function sendContactMessagetoEmail() {
 }
 
 export async function submitMessage(
-  _prevState: ContactActionState,
+  _prevState: FormActionState,
   formData: FormData,
-): Promise<ContactActionState> {
+): Promise<FormActionState> {
   const turnstileToken = formData.get("cf-turnstile-response") as string | null;
   const isHuman = await verifyTurnstileToken(turnstileToken);
 
@@ -70,14 +66,13 @@ export async function submitMessage(
   });
 
   if (!result.success) {
-    console.error("!!!!!!!!!! LINE 59 ERROR !!!!!!!!!!");
     return { error: result.error.issues[0].message, success: false };
   }
 
   try {
     await prisma.contactMessage.create({ data: result.data });
   } catch (error) {
-    console.error("!!!!!!!!!! CONTACT ERROR !!!!!!!!!!", error);
+    console.error("Failed to save contact message", error);
     return { error: GENERIC_ERROR, success: false };
   }
 

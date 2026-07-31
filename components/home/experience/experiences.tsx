@@ -1,10 +1,10 @@
 "use client";
 import { useRef, useState } from "react";
-import Accent from "../accent";
+import Accent from "../../accent";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-import ExperienceCard from "../experience-card";
+import { Button } from "../../ui/button";
+import ExperienceCard from "./experience-card";
 import { Experience } from "@/types/experience";
 
 const experience: Experience[] = [

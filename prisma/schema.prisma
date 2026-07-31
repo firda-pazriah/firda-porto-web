@@ -20,3 +20,9 @@ model contactMessage {
   message   String
   createdAt DateTime  @default(now())
 }
+
+model profile {
+  id        String    @id @default(cuid())
+  name      String
+  email     String
+}

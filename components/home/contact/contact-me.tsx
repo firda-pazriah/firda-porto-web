@@ -1,14 +1,20 @@
 "use client";
 
-import Accent from "../accent";
-import { Field, FieldDescription, FieldGroup, FieldLabel } from "../ui/field";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { submitMessage, type ContactActionState } from "./action";
+import Accent from "../../accent";
+import {
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+} from "../../ui/field";
+import { Input } from "../../ui/input";
+import { Button } from "../../ui/button";
+import { submitMessage } from "./action";
 import { useActionState } from "react";
 import Script from "next/script";
+import { FormActionState } from "@/types/form";
 
-const initialState: ContactActionState = { error: null, success: false };
+const initialState: FormActionState = { error: null, success: false };
 
 export default function ContactMe() {
   const [state, formAction, isPending] = useActionState(
