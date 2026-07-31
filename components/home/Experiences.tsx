@@ -4,14 +4,8 @@ import Accent from "../accent";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-
-type Experience = {
-  role: string;
-  company: string;
-  industry: string | null;
-  period: string;
-  achievements: string[];
-};
+import ExperienceCard from "../experience-card";
+import { Experience } from "@/types/experience";
 
 const experience: Experience[] = [
   {
@@ -116,34 +110,19 @@ export default function Experiences() {
           [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
         >
           {experience.map((exp, index) => (
-            <div
+            <ExperienceCard
               key={exp.company}
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
               onClick={() => handleSelect(index)}
-              className={cn(
-                "w-88 shrink-0 snap-center rounded-xl outline-1 outline-offset-5 bg-card p-6 text-card-foreground shadow-sm cursor-pointer transition-all duration-300 ease-out",
+              className={
                 activeIndex === index
                   ? "scale-105 opacity-100 shadow-lg z-10"
-                  : "scale-90 opacity-50",
-              )}
-            >
-              <div className="flex items-center justify-between gap-2">
-                <h3 className="text-xl font-semibold">{exp.role}</h3>
-              </div>
-              <p className="text-indigo-400 font-medium text-sm mt-1">
-                {exp.company}
-                {exp.industry ? ` · ${exp.industry}` : ""}
-              </p>
-              <p className="text-muted-foreground text-xs mt-1">{exp.period}</p>
-
-              <ul className="mt-4 space-y-2 list-disc list-inside text-sm text-muted-foreground">
-                {exp.achievements.map((achievement) => (
-                  <li key={achievement}>{achievement}</li>
-                ))}
-              </ul>
-            </div>
+                  : "scale-90 opacity-50"
+              }
+              data={exp}
+            />
           ))}
         </div>
       </div>

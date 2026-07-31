@@ -6,6 +6,7 @@ import FAQ from "@/components/home/faq";
 import Feature from "@/components/home/feature";
 import Hero from "@/components/home/hero";
 import Projects from "@/components/home/projects";
+import Resume from "@/components/home/resume";
 import Skills from "@/components/home/skills";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Experiences />
+      <Resume />
       <FAQ />
       <ContactMe />
       <Footer />

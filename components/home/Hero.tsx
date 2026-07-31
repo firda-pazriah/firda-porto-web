@@ -26,18 +26,21 @@ export default function Hero() {
               </span>
               currently building
               <span className="text-indigo-400 font-bold"> Sellmate</span> from
-              the ground up — an LLM-powered productivity suite for e-commerce
+              the ground up — an LLM-powered productivity suite for Shopee
               sellers.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#about"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
-                Get started
+                Learn more
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-foreground">
-                Learn more <span aria-hidden="true">→</span>
+              <a
+                href="#contact"
+                className="text-sm/6 font-semibold text-foreground"
+              >
+                Chat with me <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
