@@ -1,4 +1,6 @@
 import { Code, Hammer, Puzzle } from "lucide-react";
+import Image from "next/image";
+import sellmateImage from "@/public/images/sellmate.png";
 
 const features = [
   {
@@ -59,9 +61,9 @@ export default function Sellmate() {
               </dl>
             </div>
           </div>
-          <img
+          <Image
             alt="Product screenshot"
-            src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+            src={sellmateImage}
             width={2432}
             height={1442}
             className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0"
