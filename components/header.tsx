@@ -4,6 +4,13 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { navigation } from "../config/navigation";
+
+import Link from "next/link";
+import {
+  CircleAlertIcon,
+  CircleCheckIcon,
+  CircleDashedIcon,
+} from "lucide-react";
 import { Dialog, DialogContent } from "./ui/dialog";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,7 +21,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-50 w-screen">
-      <nav
+      <div
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8"
       >
@@ -46,7 +53,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <ThemeToggle />
         </div>
-      </nav>
+      </div>
       <Dialog open={mobileMenuOpen} onOpenChange={handleOpenMobileMenuChange}>
         <DialogContent className="fixed right-0 z-50 max-w-none w-screen h-screen rounded-none overflow-y-auto  bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
           <div className="flex items-start justify-between">
