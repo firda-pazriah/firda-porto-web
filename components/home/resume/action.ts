@@ -1,7 +1,7 @@
 "use server";
 
 import { prisma } from "@/lib/db";
-import { FormActionState } from "@/types/form";
+import { FormActionState } from "@/types/form-type";
 import { profileSchema } from "@/types/schema/profileSchema";
 
 const GENERIC_ERROR = "Something went wrong. Please try again.";

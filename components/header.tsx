@@ -1,9 +1,19 @@
-import { Menu } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { navigation } from "../config/navigation";
+import { Dialog, DialogContent } from "./ui/dialog";
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  function handleOpenMobileMenuChange(nextOpen: boolean) {
+    setMobileMenuOpen(nextOpen);
+  }
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed top-0 z-50 w-screen">
       <nav
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8"
@@ -17,9 +27,9 @@ export default function Header() {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            onClick={() => setMobileMenuOpen(true)}
           >
-            <span className="sr-only">Open main menu</span>
-            <Menu aria-hidden="true" className="size-6" />
+            <Menu size={32} className="text-indigo-400" />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 glass px-4 py-2 rounded-full">
@@ -37,21 +47,11 @@ export default function Header() {
           <ThemeToggle />
         </div>
       </nav>
-      {/* <Dialog
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-        className="lg:hidden"
-      >
-        <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+      <Dialog open={mobileMenuOpen} onOpenChange={handleOpenMobileMenuChange}>
+        <DialogContent className="fixed right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+              <span className="text-2xl font-bold text-indigo-400">FP.</span>
             </a>
             <button
               type="button"
@@ -59,7 +59,7 @@ export default function Header() {
               className="-m-2.5 rounded-md p-2.5 text-gray-200"
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="size-6" />
+              <X />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -85,8 +85,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </DialogPanel>
-      </Dialog> */}
+        </DialogContent>
+      </Dialog>
     </header>
   );
 }

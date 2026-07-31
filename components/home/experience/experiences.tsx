@@ -5,7 +5,7 @@ import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { cn } from "@/lib/utils";
 import { Button } from "../../ui/button";
 import ExperienceCard from "./experience-card";
-import { Experience } from "@/types/experience";
+import { Experience } from "@/types/experience-type";
 
 const experience: Experience[] = [
   {

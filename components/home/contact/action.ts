@@ -4,7 +4,7 @@ import { waitUntil } from "@vercel/functions";
 import { Resend } from "resend";
 import { contactSchema } from "@/types/schema/contactSchema";
 import { prisma } from "@/lib/db";
-import { FormActionState } from "@/types/form";
+import { FormActionState } from "@/types/form-type";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const GENERIC_ERROR = "Something went wrong. Please try again.";

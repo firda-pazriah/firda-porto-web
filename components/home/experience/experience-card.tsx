@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Experience } from "@/types/experience";
+import { Experience } from "@/types/experience-type";
 import { Separator } from "../../ui/separator";
 import BulletList from "../../ui/bullet-list";
 

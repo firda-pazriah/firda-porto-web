@@ -12,7 +12,7 @@ import { Button } from "../../ui/button";
 import { submitMessage } from "./action";
 import { useActionState } from "react";
 import Script from "next/script";
-import { FormActionState } from "@/types/form";
+import { FormActionState } from "@/types/form-type";
 
 const initialState: FormActionState = { error: null, success: false };
 

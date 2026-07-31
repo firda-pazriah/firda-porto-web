@@ -19,7 +19,7 @@ import { Field, FieldGroup } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-import { FormActionState } from "@/types/form";
+import { FormActionState } from "@/types/form-type";
 import { submitProfileToDownload } from "./action";
 
 const initialState: FormActionState = { error: null, success: false };
