@@ -1,3 +1,4 @@
+"use client";
 import Stat from "../ui/stat";
 const links = [
   { name: "GitHub", url: "https://github.com/firda-pazriah" },
@@ -15,16 +16,6 @@ export default function About() {
       id="about"
       className="relative isolate overflow-hidden  py-24 sm:py-32 bg-background"
     >
-      {/* <img
-        alt=""
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=screen"
-        className="absolute inset-0 -z-10 size-full object-cover object-right opacity-10 md:object-center dark:hidden"
-      />
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-        className="absolute inset-0 -z-10 size-full object-cover object-right not-dark:hidden md:object-center"
-      /> */}
       <div
         aria-hidden="true"
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -51,10 +42,10 @@ export default function About() {
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-foreground">
+          <h2 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-foreground animate-fade-in">
             About Me
           </h2>
-          <p className="mt-8 text-lg font-medium text-pretty text-gray-700 sm:text-xl/8 dark:text-gray-300">
+          <p className="mt-8 text-lg font-medium text-pretty text-gray-700 sm:text-xl/8 dark:text-gray-300 animate-fade-in">
             I&apos;m planning my comeback to the tech industry after a 1.5-year
             career break. After being laid off from my 9-year engineering
             career, I chose to take that time to focus on being a mom. That

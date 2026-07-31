@@ -48,8 +48,8 @@ export default function Header() {
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onOpenChange={handleOpenMobileMenuChange}>
-        <DialogContent className="fixed right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-          <div className="flex items-center justify-between">
+        <DialogContent className="fixed right-0 z-50 max-w-none w-screen h-screen rounded-none overflow-y-auto  bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <div className="flex items-start justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="text-2xl font-bold text-indigo-400">FP.</span>
             </a>
@@ -68,7 +68,10 @@ export default function Header() {
                 {navigation.map((item) => (
                   <a
                     key={item.name}
-                    href={item.href}
+                    onClick={() => {
+                      window.location.href = item.href;
+                      setMobileMenuOpen(false);
+                    }}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                   >
                     {item.name}
