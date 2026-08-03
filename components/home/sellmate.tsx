@@ -6,7 +6,7 @@ const features = [
   {
     name: "The Problem.",
     description:
-      "Sellers patch gaps left by free ERP tools with spreadsheets and manual WhatsApp checks.",
+      "Existing omnichannel platforms are often too complex for small businesses, so sellers still manage orders, WhatsApp messages, and daily tasks manually.",
     icon: Puzzle,
   },
   {
@@ -40,10 +40,10 @@ export default function Sellmate() {
                 Sellmate
               </p>
               <p className="mt-6 text-lg/8 text-muted-foreground">
-                A seller productivity suite that fills the gaps free e-commerce
-                ERP tools leave behind — order capture, review analysis, and
-                task tracking, built from problems I&apos;ve faced running my
-                own shop.
+                A seller productivity suite built from my own experience running
+                an online shop. After paying for an omnichannel platform and
+                using only 10% of its features, I wanted something simpler,
+                faster, and focused on what actually matters.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-muted-foreground lg:max-w-none">
                 {features.map((feature) => (
